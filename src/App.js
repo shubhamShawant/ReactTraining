@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Layout from "./Components/Layout";
+
+const helloGreet = () => {
+  alert("Hello Greet");
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>React app</h1>
+      <Layout
+        data={{
+          name: "himanshu lal",
+          name1: "sdkjfshdkfjh",
+          name2: "sdkjfshdkfjh",
+          name3: "sdkjfshdkfjh",
+        }}
+        helloGreet={helloGreet}
+      >
+        <h3>adskfjaskfjhdf s sfdg sfd g</h3>
+      </Layout>
     </div>
   );
 }

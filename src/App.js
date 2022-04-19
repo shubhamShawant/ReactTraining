@@ -1,5 +1,6 @@
 import "./App.css";
 import Layout from "./Components/Layout";
+import Posts from "./Components/PostComponent/Posts";
 
 const helloGreet = () => {
   alert("Hello Greet");
@@ -9,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <h1>React app</h1>
-      <Layout
+      {/* <Layout
         data={{
           name: "himanshu lal",
           name1: "sdkjfshdkfjh",
@@ -19,7 +20,8 @@ function App() {
         helloGreet={helloGreet}
       >
         <h3>adskfjaskfjhdf s sfdg sfd g</h3>
-      </Layout>
+      </Layout> */}
+      <Posts />
     </div>
   );
 }

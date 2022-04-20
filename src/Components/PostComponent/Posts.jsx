@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import https from "../HTTPServices/https";
+import { Link } from "react-router-dom";
 
 export default function Posts() {
   const [state, setState] = useState([]);
@@ -29,9 +30,10 @@ export default function Posts() {
                   <div className="card-body">
                     <h5 className="card-title">{item.title}</h5>
                     <p className="card-text">{item.body}</p>
-                    <a href="#" className="card-link">
+                    {/* <a href="#" className="card-link">
                       View More
-                    </a>
+                    </a> */}
+                    <Link to={`/PostDetails:${item.id}`}> View Details </Link>
                   </div>
                 </div>
               </div>

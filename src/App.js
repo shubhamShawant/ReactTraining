@@ -1,5 +1,7 @@
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Layout from "./Components/Layout";
+import PostDetails from "./Components/PostComponent/PostDetails";
 import Posts from "./Components/PostComponent/Posts";
 
 const helloGreet = () => {
@@ -21,7 +23,14 @@ function App() {
       >
         <h3>adskfjaskfjhdf s sfdg sfd g</h3>
       </Layout> */}
-      <Posts />
+      {/* <Posts /> */}
+      {/* <PostDetails /> */}
+      <Routes>
+        {/* <Route path="/"  render={() => <Posts />} /> */}
+        <Route path="/" element={<h1> App Components</h1>} />
+        <Route path="/posts" element={<Posts />} />
+        <Route path="/PostDetails:id" element={<PostDetails />} />
+      </Routes>
     </div>
   );
 }
